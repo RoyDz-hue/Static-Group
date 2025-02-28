@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Group Management System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div id="app">
+        <nav id="navbar">
+            <div class="nav-brand">Admin Dashboard</div>
+            <div class="nav-links">
+                <a href="#" id="logoutBtn">Logout</a>
+            </div>
+        </nav>
+
+        <div class="admin-container">
+            <div class="admin-sidebar">
+                <button id="showUsers" class="admin-nav-btn active">Manage Users</button>
+                <button id="showGroups" class="admin-nav-btn">Manage Groups</button>
+                <button id="showSettings" class="admin-nav-btn">Settings</button>
+            </div>
+
+            <div class="admin-content">
+                <!-- Users Section -->
+                <div id="usersSection" class="admin-section">
+                    <h2>Users Management</h2>
+                    <div id="usersList" class="data-grid">
+                        Loading users...
+                    </div>
+                </div>
+
+                <!-- Groups Section -->
+                <div id="groupsSection" class="admin-section hidden">
+                    <h2>Groups Management</h2>
+                    <button id="regenerateGroups" class="action-btn">Regenerate Groups</button>
+                    <div id="groupsList" class="data-grid">
+                        Loading groups...
+                    </div>
+                </div>
+
+                <!-- Settings Section -->
+                <div id="settingsSection" class="admin-section hidden">
+                    <h2>System Settings</h2>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label for="groupSize">Group Size</label>
+                            <input type="number" id="groupSize" min="2" value="5">
+                        </div>
+                        <button id="saveSettings" class="action-btn">Save Settings</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="../js/config.js"></script>
+    <script type="module" src="../js/admin.js"></script>
+</body>
+</html>
